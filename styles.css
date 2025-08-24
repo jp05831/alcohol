@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills screen without distortion */
+}
+
+.content {
+    position: absolute;
+    top: 55%; /* Maintain downward shift */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.main-logo {
+    width: 450px; /* Larger main logo */
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack X logo and contract text vertically */
+    align-items: center;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 0.7rem;
+}
+
+.buttons .social-link {
+    padding: 0; /* Remove padding for image link */
+    background-color: transparent; /* No background for the link itself */
+    outline: none; /* Remove blue outline */
+}
+
+.buttons .social-link:focus, .buttons .social-link:active {
+    outline: none; /* Ensure no outline on focus/click */
+}
+
+.buttons .social-logo {
+    width: 250px; /* Larger X logo */
+    height: auto;
+    padding: 0.7rem; /* Match previous button padding */
+    background-color: #1da0f200; /* X/Twitter blue */
+    border-radius: 7px;
+    border: none; /* Remove any border */
+}
+
+.buttons .social-logo:hover {
+    background-color: #0d8ecf00;
+}
+
+/* Ensure no outline on image itself */
+.buttons .social-logo:focus, .buttons .social-logo:active {
+    outline: none;
+}
+
+.new-contract {
+    font-size: 1.3rem; /* Larger contract text */
+    margin: 0.7rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content {
+        top: 60%; /* Maintain downward shift for mobile */
+    }
+    .main-logo {
+        width: 320px; /* Larger but scaled for mobile */
+    }
+    .buttons .social-logo {
+        width: 56px; /* Larger but scaled for mobile */
+    }
+    .new-contract {
+        font-size: 1rem;
+    }
+}
